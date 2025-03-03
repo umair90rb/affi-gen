@@ -13,8 +13,22 @@ interface InfoFormProps {
     amount: number;
     amount_words: string;
   };
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  onChange: (callback: (prevValues: any) => any) => void;
+  onChange: React.Dispatch<
+    React.SetStateAction<{
+      id: string;
+      type: string;
+      amount: number;
+      amount_words: string;
+      description: string;
+      applicant: string;
+      applicant_cnic: string;
+      so: string;
+      agent: string;
+      issue_date: Date;
+      reason: string;
+      vendor: string;
+    }>
+  >;
 }
 
 export default function InfoForm({ values, onChange }: InfoFormProps) {
