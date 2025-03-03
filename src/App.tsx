@@ -16,6 +16,7 @@ function App() {
     reason: '',
     vendor: '',
   });
+
   return (
     <>
       <div
@@ -26,7 +27,7 @@ function App() {
           // border: '1px solid black',
         }}
       >
-        <InfoForm form={form} setForm={setForm} />
+        <InfoForm values={form} onChange={setForm} />
       </div>
       <div
         style={{
