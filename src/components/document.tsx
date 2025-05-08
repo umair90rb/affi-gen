@@ -7,7 +7,10 @@ import {
   StyleSheet,
 } from '@react-pdf/renderer';
 
-// Create styles
+type PDFDocumentProps = {
+  content: string;
+};
+
 const styles = StyleSheet.create({
   page: {
     flexDirection: 'row',
@@ -21,7 +24,7 @@ const styles = StyleSheet.create({
   },
 });
 
-export default function PDFDocument({ content }) {
+export default function PDFDocument({ content }: PDFDocumentProps) {
   return (
     <PDFViewer showToolbar={true} width={'100%'} height={'100%'}>
       <Document>
